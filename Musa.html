@@ -90,8 +90,38 @@
                                 +2348039627733
                         </td>
                         </tr>
+                    </table>
                 </fieldset>
+                <button class="open-button" onclick="openForm()">Contact form</button>
+                <div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Contact details</h1>
+    <label for="title"><b>Title</b></label>
+    <input type="text" placeholder="Title" name="title">
+
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Your Name" name="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" required>
+
+    <label for="message"><b>Message</b></label>
+    <input type="text" placeholder="Your Message Here" name="msg" required>
+
+    <button type="submit" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+                </div>
         </section>
     </main>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+            
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
 </body>
 </html>
